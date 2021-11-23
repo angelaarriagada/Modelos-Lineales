@@ -1,5 +1,6 @@
 library(readxl)
 #la base de datos fue sacada de https://www.kaggle.com/venus90210/an-lisis-de-felicidad/data
+X2017 <- read.csv("C:/Users/Javiera Arriagada/Desktop/2017.csv")
 
 felicidad <- X2017
 
@@ -26,7 +27,7 @@ coer<-coef(modelo1)
  # la generosidad no afecta en nada la felicidad de la persona 
 
 #_________
-#Existe un efecto estadisticamente significativo para la felicidad  entre  el ingreso recibido y la corrupción del gobierno 
+#Existe un efecto estadisticamente significativo para la felicidad  entre  el ingreso recibido y la corrupciÃ³n del gobierno 
 #h0=b4=b5=0
 #h1=b4<>b5<>0 diferentes 
 
@@ -40,7 +41,7 @@ anova(modelo2,modelo1)
 #calcular la matriz de varianzas y covarianzas de los betas
 vcov(modelo1)
 
-#Elección del mejor modelo
+#ElecciÃ³n del mejor modelo
 bestsubset <- function(X, y){
   P = ncol(X)
   subsets = expand.grid(rep( list(0:1), P))
